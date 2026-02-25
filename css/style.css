@@ -1,7 +1,7 @@
 /* ========== General Styles ========== */
 body {
-  background-color: #FFFFFF;       /* White background */
-  color: #4B3621;                  /* Cafe Noir text */
+  background-color: #FFFFFF;                     /* White background */
+  color: #4B3621;                                /* Cafe Noir text */
   font-family: 'Montserrat', Arial, sans-serif; /* Montserrat font */
   margin: 0;
   padding: 0;
@@ -17,7 +17,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 100;
-  flex-wrap: wrap;                 /* allow wrapping on small screens */
+  flex-wrap: nowrap;                  /* keep single row navbar */
 }
 
 .topnav a {
@@ -30,7 +30,7 @@ body {
 }
 
 .topnav a:hover {
-  background-color: #A07855;       /* Lighter brown on hover */
+  background-color: #A07855;          /* Lighter brown hover */
   color: white;
 }
 
@@ -41,9 +41,9 @@ header {
 }
 
 header h1 {
-  font-size: 4em;                  /* Bigger header */
+  font-size: 4em;                     /* Big header for desktop */
   margin-bottom: 20px;
-  color: #4B3621;                  /* Cafe Noir */
+  color: #4B3621;                     /* Cafe Noir */
 }
 
 header p {
@@ -55,9 +55,9 @@ header p {
 
 /* ========== Subheadings ========== */
 h2 {
-  font-size: 2.2em;                /* Slightly larger subheading */
+  font-size: 2.2em;                    /* Slightly larger subheading */
   margin-bottom: 25px;
-  border-bottom: 4px solid #4B3621; /* Thicker brown line */
+  border-bottom: 4px solid #4B3621;    /* Thicker brown line */
   padding-bottom: 10px;
 }
 
@@ -90,16 +90,12 @@ footer {
 
 /* ========== Responsive Styles ========== */
 @media screen and (max-width: 768px) {
-  .topnav {
-    flex-direction: column;        /* Stack navbar links on small screens */
-  }
-
   header h1 {
-    font-size: 3em;                /* Slightly smaller header on mobile */
+    font-size: 3em;                    /* Smaller header for tablets */
   }
 
   h2 {
-    font-size: 2em;                /* Adjust subheading size */
+    font-size: 2em;                    /* Subheading adjustment */
   }
 
   main {
@@ -107,21 +103,25 @@ footer {
   }
 
   header p {
-    font-size: 1em;
+    font-size: 1.1em;
   }
 }
 
 @media screen and (max-width: 480px) {
   header h1 {
-    font-size: 2.5em;
+    font-size: 2.2em;                  /* Shrink header for phones */
   }
 
   h2 {
-    font-size: 1.8em;
+    font-size: 1.8em;                  /* Subheading smaller on phone */
   }
 
   .topnav a {
-    padding: 10px 15px;
+    padding: 10px 12px;                /* Maintain navbar single row */
     font-size: 0.9em;
+  }
+
+  header p {
+    font-size: 1em;
   }
 }
