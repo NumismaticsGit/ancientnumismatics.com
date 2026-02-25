@@ -2,7 +2,7 @@
 body {
   background-color: #FFFFFF;       /* White background */
   color: #4B3621;                  /* Cafe Noir text */
-  font-family: 'Montserrat', Arial, sans-serif; /* Montserrat font with fallback */
+  font-family: 'Montserrat', Arial, sans-serif; /* Montserrat font */
   margin: 0;
   padding: 0;
   line-height: 1.6;
@@ -10,17 +10,18 @@ body {
 
 /* ========== Top Navigation Bar ========== */
 .topnav {
-  background-color: #FFFFFF;       /* White navbar background */
+  background-color: #FFFFFF;       
   display: flex;
   justify-content: center;
   border-bottom: 2px solid #4B3621; /* Cafe Noir border at bottom */
   position: sticky;
   top: 0;
   z-index: 100;
+  flex-wrap: wrap;                 /* allow wrapping on small screens */
 }
 
 .topnav a {
-  color: #4B3621;                  /* Cafe Noir links */
+  color: #4B3621;
   text-align: center;
   padding: 14px 20px;
   text-decoration: none;
@@ -33,21 +34,30 @@ body {
   color: white;
 }
 
-/* ========== Headers ========== */
-h1, h2, h3 {
-  color: #4B3621;                  /* Cafe Noir */
-  font-family: 'Montserrat', Arial, sans-serif;
+/* ========== Header ========== */
+header {
+  text-align: center;
+  padding: 60px 20px 20px 20px;
 }
 
-h1 {
-  font-size: 3em;
-  margin-bottom: 10px;
-}
-
-h2 {
-  font-size: 2em;
+header h1 {
+  font-size: 4em;                  /* Bigger header */
   margin-bottom: 20px;
-  border-bottom: 2px solid #4B3621;
+  color: #4B3621;                  /* Cafe Noir */
+}
+
+header p {
+  font-size: 1.2em;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ========== Subheadings ========== */
+h2 {
+  font-size: 2.2em;                /* Slightly larger subheading */
+  margin-bottom: 25px;
+  border-bottom: 4px solid #4B3621; /* Thicker brown line */
   padding-bottom: 10px;
 }
 
@@ -59,12 +69,6 @@ h3 {
 /* ========== Paragraphs ========== */
 p {
   margin-bottom: 20px;
-}
-
-/* ========== Header Section ========== */
-header {
-  text-align: center;
-  padding: 60px 20px 20px 20px;
 }
 
 /* ========== Main Content ========== */
@@ -82,4 +86,42 @@ footer {
   margin-top: 40px;
   font-size: 0.9em;
   color: #4B3621;
+}
+
+/* ========== Responsive Styles ========== */
+@media screen and (max-width: 768px) {
+  .topnav {
+    flex-direction: column;        /* Stack navbar links on small screens */
+  }
+
+  header h1 {
+    font-size: 3em;                /* Slightly smaller header on mobile */
+  }
+
+  h2 {
+    font-size: 2em;                /* Adjust subheading size */
+  }
+
+  main {
+    padding: 20px 15px;
+  }
+
+  header p {
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header h1 {
+    font-size: 2.5em;
+  }
+
+  h2 {
+    font-size: 1.8em;
+  }
+
+  .topnav a {
+    padding: 10px 15px;
+    font-size: 0.9em;
+  }
 }
