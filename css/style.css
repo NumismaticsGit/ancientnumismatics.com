@@ -1,1 +1,85 @@
+/* ========== General Styles ========== */
+body {
+  background-color: #FFFFFF;       /* White background */
+  color: #4B3621;                  /* Cafe Noir text */
+  font-family: 'Montserrat', Arial, sans-serif; /* Montserrat font with fallback */
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
 
+/* ========== Top Navigation Bar ========== */
+.topnav {
+  background-color: #FFFFFF;       /* White navbar background */
+  display: flex;
+  justify-content: center;
+  border-bottom: 2px solid #4B3621; /* Cafe Noir border at bottom */
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.topnav a {
+  color: #4B3621;                  /* Cafe Noir links */
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.topnav a:hover {
+  background-color: #A07855;       /* Lighter brown on hover */
+  color: white;
+}
+
+/* ========== Headers ========== */
+h1, h2, h3 {
+  color: #4B3621;                  /* Cafe Noir */
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #4B3621;
+  padding-bottom: 10px;
+}
+
+h3 {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+}
+
+/* ========== Paragraphs ========== */
+p {
+  margin-bottom: 20px;
+}
+
+/* ========== Header Section ========== */
+header {
+  text-align: center;
+  padding: 60px 20px 20px 20px;
+}
+
+/* ========== Main Content ========== */
+main {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* ========== Footer ========== */
+footer {
+  text-align: center;
+  padding: 20px;
+  border-top: 2px solid #4B3621;
+  margin-top: 40px;
+  font-size: 0.9em;
+  color: #4B3621;
+}
