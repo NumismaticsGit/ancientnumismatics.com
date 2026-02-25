@@ -17,7 +17,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 100;
-  flex-wrap: nowrap;                  /* keep single row navbar */
+  flex-wrap: nowrap;                  /* Keep single row navbar */
 }
 
 .topnav a {
@@ -116,12 +116,13 @@ footer {
     font-size: 1.8em;                  /* Subheading smaller on phone */
   }
 
-  .topnav a {
-    padding: 10px 12px;                /* Maintain navbar single row */
-    font-size: 0.9em;
-  }
-
   header p {
     font-size: 1em;
+  }
+
+  /* Mobile navbar fixes */
+  .topnav a {
+    padding: 8px 10px;                 /* Reduce padding so links fit */
+    font-size: 0.85em;                 /* Slightly smaller text */
   }
 }
