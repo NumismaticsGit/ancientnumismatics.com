@@ -4,9 +4,122 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ancient Numismatics</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Page Background & Text */
+    body {
+      background-color: #FFFFFF;
+      color: #4B3621; /* Cafe Noir */
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Top Navigation Bar */
+    .topnav {
+      background-color: #FFFFFF;
+      display: flex;
+      justify-content: center;
+      border-bottom: 2px solid #4B3621;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .topnav a {
+      color: #4B3621;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .topnav a:hover {
+      background-color: #A07855; /* lighter brown accent */
+      color: white;
+    }
+
+    /* Page Header */
+    header {
+      text-align: center;
+      padding: 60px 20px 20px 20px;
+    }
+
+    header h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+      color: #4B3621;
+    }
+
+    header p {
+      font-size: 1.2em;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    /* Main Content Section */
+    main {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    main h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #4B3621;
+      padding-bottom: 10px;
+    }
+
+    main p {
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      border-top: 2px solid #4B3621;
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #4B3621;
+    }
+  </style>
 </head>
 <body>
-  <h1>Welcome to Ancient Numismatics</h1>
-  <p>Your guide to coins of the ancient world.</p>
+
+  <!-- Top Navigation Bar -->
+  <nav class="topnav">
+    <a href="index.html">Home</a>
+    <a href="guides.html">Guides</a>
+    <a href="buy.html">Where to Buy</a>
+    <a href="resources.html">Resources</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <!-- Page Header -->
+  <header>
+    <h1>Ancient Numismatics</h1>
+    <p>Welcome to your guide to ancient coins — explore Greek, Roman, Byzantine, and Persian coinage. Learn about different eras, metals, and designs, all in one comprehensive resource.</p>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <h2>Featured Categories</h2>
+    <p><strong>Greek Coins:</strong> City-states, Hellenistic kingdoms, gold, silver, and bronze coins.</p>
+    <p><strong>Roman Coins:</strong> Republic and Empire issues, denominations, and emperors.</p>
+    <p><strong>Byzantine Coins:</strong> Solidus, miliaresion, folles, and notable emperors.</p>
+    <p><strong>Persian Coins:</strong> Achaemenid Darics, Sassanian drachms, and other eastern coinage.</p>
+    <p>Explore the gallery, guides, and resources to learn more about the rich history of ancient coins.</p>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2026 Ancient Numismatics. All rights reserved.
+  </footer>
+
 </body>
 </html>
