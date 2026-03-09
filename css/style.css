@@ -1,128 +1,160 @@
-/* ========== General Styles ========== */
-body {
-  background-color: #FFFFFF;                     /* White background */
-  color: #4B3621;                                /* Cafe Noir text */
-  font-family: 'Montserrat', Arial, sans-serif; /* Montserrat font */
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
+body{
+font-family:'Montserrat',sans-serif;
+margin:0;
+background:linear-gradient(135deg,#f4f6fb,#e9eef7);
+color:#222;
 }
 
-/* ========== Top Navigation Bar ========== */
-.topnav {
-  background-color: #FFFFFF;       
-  display: flex;
-  justify-content: center;
-  border-bottom: 2px solid #4B3621; /* Cafe Noir border at bottom */
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  flex-wrap: nowrap;                  /* Keep single row navbar */
+/* NAVIGATION */
+
+.topnav{
+
+display:flex;
+justify-content:center;
+gap:30px;
+
+padding:18px;
+
+backdrop-filter:blur(12px);
+background:rgba(255,255,255,0.55);
+
+border-bottom:1px solid rgba(255,255,255,0.35);
 }
 
-.topnav a {
-  color: #4B3621;
-  text-align: center;
-  padding: 14px 20px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s;
+.topnav a{
+
+text-decoration:none;
+color:#333;
+font-weight:600;
+
+padding:8px 14px;
+
+border-radius:14px;
+
+transition:all .25s ease;
+
 }
 
-.topnav a:hover {
-  background-color: #A07855;          /* Lighter brown hover */
-  color: white;
+.topnav a:hover{
+
+background:rgba(255,255,255,0.6);
+
+transform:translateY(-2px);
+
 }
 
-/* ========== Header ========== */
-header {
-  text-align: center;
-  padding: 60px 20px 20px 20px;
+/* HEADER */
+
+header{
+
+text-align:center;
+
+padding:80px 20px;
+
+max-width:900px;
+
+margin:auto;
+
 }
 
-header h1 {
-  font-size: 4em;                     /* Big header for desktop */
-  margin-bottom: 20px;
-  color: #4B3621;                     /* Cafe Noir */
+header h1{
+
+font-size:44px;
+
+margin-bottom:12px;
+
 }
 
-header p {
-  font-size: 1.2em;
-  max-width: 700px;
-  margin: 0 auto;
-  line-height: 1.6;
+header p{
+
+font-size:18px;
+
+line-height:1.6;
+
+color:#555;
+
 }
 
-/* ========== Subheadings ========== */
-h2 {
-  font-size: 2.2em;                    /* Slightly larger subheading */
-  margin-bottom: 25px;
-  border-bottom: 4px solid #4B3621;    /* Thicker brown line */
-  padding-bottom: 10px;
+/* MAIN CONTENT */
+
+main{
+
+max-width:1100px;
+
+margin:auto;
+
+padding:40px 20px;
+
 }
 
-h3 {
-  font-size: 1.5em;
-  margin-bottom: 15px;
+main h2{
+
+text-align:center;
+
+margin-bottom:40px;
+
 }
 
-/* ========== Paragraphs ========== */
-p {
-  margin-bottom: 20px;
+/* CARD GRID */
+
+.card-container{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+
+gap:28px;
+
 }
 
-/* ========== Main Content ========== */
-main {
-  padding: 40px 20px;
-  max-width: 1000px;
-  margin: 0 auto;
+/* CARDS */
+
+.card{
+
+padding:28px;
+
+border-radius:22px;
+
+backdrop-filter:blur(12px);
+
+background:rgba(255,255,255,0.55);
+
+border:1px solid rgba(255,255,255,0.4);
+
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+
+transition:all .25s ease;
+
 }
 
-/* ========== Footer ========== */
-footer {
-  text-align: center;
-  padding: 20px;
-  border-top: 2px solid #4B3621;
-  margin-top: 40px;
-  font-size: 0.9em;
-  color: #4B3621;
+.card:hover{
+
+transform:translateY(-6px) scale(1.02);
+
+box-shadow:0 20px 40px rgba(0,0,0,0.12);
+
 }
 
-/* ========== Responsive Styles ========== */
-@media screen and (max-width: 768px) {
-  header h1 {
-    font-size: 3em;                    /* Smaller header for tablets */
-  }
+.card h3{
 
-  h2 {
-    font-size: 2em;                    /* Subheading adjustment */
-  }
+margin-top:0;
 
-  main {
-    padding: 20px 15px;
-  }
-
-  header p {
-    font-size: 1.1em;
-  }
 }
 
-@media screen and (max-width: 480px) {
-  header h1 {
-    font-size: 2.2em;                  /* Shrink header for phones */
-  }
+/* FOOTER */
 
-  h2 {
-    font-size: 1.8em;                  /* Subheading smaller on phone */
-  }
+footer{
 
-  header p {
-    font-size: 1em;
-  }
+text-align:center;
 
-  /* Mobile navbar fixes */
-  .topnav a {
-    padding: 8px 10px;                 /* Reduce padding so links fit */
-    font-size: 0.85em;                 /* Slightly smaller text */
-  }
+padding:30px;
+
+margin-top:70px;
+
+backdrop-filter:blur(10px);
+
+background:rgba(255,255,255,0.55);
+
+border-top:1px solid rgba(255,255,255,0.35);
+
 }
