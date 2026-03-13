@@ -102,8 +102,8 @@ z-index:-1;
 
 /* soften edges so it blends */
 
-mask-image:radial-gradient(circle, black 60%, transparent 95%);
--webkit-mask-image:radial-gradient(circle, black 60%, transparent 95%);
+mask-image:radial-gradient(ellipse at center, black 88%, transparent 97%);
+-webkit-mask-image:radial-gradient(ellipse at center, black 88%, transparent 97%);
 
 }
 
