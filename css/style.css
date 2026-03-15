@@ -272,7 +272,9 @@ left:50%;
 
 position:absolute;
 
-top:40px;
+top:50%;
+transform:translateY(-50%);
+
 right:-11px;
 
 width:18px;
