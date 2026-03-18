@@ -407,6 +407,82 @@ right:auto;
 
 }
 
+/* GUIDES GRID */
+
+.guides-section{
+
+padding:80px 20px;
+
+}
+
+.guides-grid{
+
+display:grid;
+grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+gap:30px;
+
+max-width:1000px;
+margin:auto;
+
+}
+
+/* CARD (matches homepage style) */
+
+.era-card{
+
+text-decoration:none;
+color:#222;
+
+background:rgba(255,255,255,0.65);
+backdrop-filter:blur(12px);
+
+border-radius:18px;
+padding:20px;
+
+box-shadow:0 8px 22px rgba(0,0,0,0.08);
+
+transition:all .28s ease;
+
+display:flex;
+flex-direction:column;
+align-items:center;
+text-align:center;
+
+}
+
+/* HOVER (same feel as homepage) */
+
+.era-card:hover{
+
+transform:translateY(-6px);
+box-shadow:0 16px 36px rgba(0,0,0,0.12);
+
+}
+
+/* IMAGE */
+
+.era-card img{
+
+width:100%;
+max-width:160px;
+
+border-radius:12px;
+margin-bottom:12px;
+
+box-shadow:0 6px 14px rgba(0,0,0,0.08);
+
+}
+
+/* TITLE */
+
+.era-card h3{
+
+margin:0;
+font-size:20px;
+font-weight:600;
+
+}
+
 /* FOOTER */
 
 footer{
