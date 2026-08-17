@@ -1,69 +1,132 @@
-import Image from "next/image";
+const eras = [
+  {
+    title: "Early/Archaic",
+    description:
+      "Lydian electrum issues marking the earliest known struck coinage in the ancient world.",
+    image: "/images/early_icon.jpg",
+    alt: "Ancient Early Coin",
+  },
+  {
+    title: "Persian",
+    description:
+      "Achaemenid darics and sigloi to Sassanian drachms circulating across the ancient Near East.",
+    image: "/images/persian_icon.jpg",
+    alt: "Ancient Persian Coin",
+  },
+  {
+    title: "Greek",
+    description:
+      "City-states, Hellenistic kingdoms, and the iconic silver tetradrachms that defined early coinage.",
+    image: "/images/greek_icon.jpg",
+    alt: "Ancient Greek Coin",
+  },
+  {
+    title: "Roman",
+    description:
+      "From the Roman Republic to the Imperial era, explore emperors, denominations, and minting traditions.",
+    image: "/images/roman_icon.jpg",
+    alt: "Ancient Roman Coin",
+  },
+  {
+    title: "Byzantine",
+    description:
+      "Gold solidi, miliaresia, and bronze folles from the continuation of the Roman Empire in the east.",
+    image: "/images/byzantine_icon.jpg",
+    alt: "Byzantine Coin",
+  },
+  {
+    title: "Asian",
+    description:
+      "Chinese cash coins and Indian punch-marked issues forming early eastern coinage.",
+    image: "/images/asian_icon.jpg",
+    alt: "Ancient Asian Coin",
+  },
+];
+
+const timeline = [
+  {
+    title: "~650 BC – Birth of Coinage",
+    description:
+      "The first coins were struck in Lydia using electrum from rivers such as the Pactolus. These early pieces introduced standardized metal currency.",
+  },
+  {
+    title: "560 BC – Croesus Reform",
+    description:
+      "King Croesus introduced the first pure gold and silver coinage, establishing a bimetallic monetary system.",
+  },
+  {
+    title: "500 BC – Greek Expansion",
+    description:
+      "Greek city-states such as Athens began striking large silver coinage used throughout Mediterranean trade.",
+  },
+  {
+    title: "330 BC – Alexander's Empire",
+    description:
+      "Coinage of Alexander the Great spread across the eastern Mediterranean and became the dominant trade currency.",
+  },
+  {
+    title: "211 BC – Roman Denarius",
+    description:
+      "Rome introduced the silver denarius, forming the backbone of the Roman monetary system.",
+  },
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+    <>
+      <nav className="topnav">
+        <a href="/">Home</a>
+        <a href="/guides">Guides</a>
+        <a href="/buy">Where to Buy</a>
+        <a href="/resources">Resources</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+      </nav>
+
+      <header>
+        <h1>Ancient Numismatics</h1>
+
+        <p>
+          Explore the world of ancient coinage - from the riverbeds of Lydia
+          where electrum was first gathered for coinage, to Greek, Persian,
+          Roman, Byzantine and many other civilizations. Learn about the
+          history, metals, designs, and collecting traditions behind some of
+          the most fascinating objects of antiquity.
+        </p>
+      </header>
+
+      <main>
+        <h2>Explore Coinage of the Ancient World</h2>
+
+        <div className="card-container">
+          {eras.map((era) => (
+            <div className="card" key={era.title}>
+              <h3>{era.title}</h3>
+              <p>{era.description}</p>
+              <img src={era.image} alt={era.alt} />
+            </div>
+          ))}
         </div>
       </main>
-    </div>
+
+      <section className="timeline">
+        <h2>History of Coinage</h2>
+
+        <div className="timeline-container">
+          {timeline.map((item) => (
+            <div className="timeline-item" key={item.title}>
+              <div className="timeline-dot"></div>
+
+              <div className="timeline-card">
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <footer>© 2026 Ancient Numismatics. All rights reserved.</footer>
+    </>
   );
 }
